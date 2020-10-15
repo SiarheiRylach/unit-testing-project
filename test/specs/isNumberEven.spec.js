@@ -20,3 +20,20 @@ describe('isNumberEven positive scenarios', function() {
     expect(validator.isNumberEven(5)).to.be.false;
   });
 });
+
+describe('isNumberEven negative scenarios', function() {
+  let validator;
+
+  beforeEach(function() {
+    validator = new NumbersValidator();
+  });
+
+  afterEach(function() {
+    validator = null;
+  });
+
+  it('should throw an error if arg is not of type "Number"', function() {
+    // eslint-disable-next-line max-len
+    expect(() => validator.isNumberEven('5')).to.throw('5 is not of type "Number" it is of type "string"');
+  });
+});
