@@ -35,7 +35,7 @@ class NumberValidator {
      * @return {Array<Number>} array of even numbers
      * @memberof NumberValidator
      */
-  getEvenNumberFromArray(arrayOfNumbers) {
+  getEvenNumbersFromArray(arrayOfNumbers) {
     if (Array.isArray(arrayOfNumbers) &&
       arrayOfNumbers.every((item) => typeof item === 'number')) {
       const arrayOfEvenNumbers = arrayOfNumbers.filter(this.isNumberEven);
